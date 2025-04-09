@@ -1,0 +1,110 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
+
+/* styling for body */
+body {
+  background: linear-gradient(135deg, #100000, #3a0000, #0a0000);
+  font-family: "Parkinsans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Styling for the slider container */
+.slider-container {
+  background: rgba(148, 10, 10, 0.306);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+  max-width: 650px;
+  width: 100%;
+  height: 500px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for slider container */
+.slider-container:hover {
+  transform: scale(1.03);
+  box-shadow: 15px 10px 30px rgba(147, 1, 1, 0.594);
+}
+
+/* Styling for slider images */
+.slider-container__image {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  object-fit: cover;
+  max-height: 300px;
+}
+
+/* Hover effect for the images */
+/* .slider-container__image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(255, 0, 0, 0.8);
+} */
+
+/* Styling for the description text */
+.slider-container__description {
+  font-size: 18px;
+  font-weight: 500;
+  color: #e6e1d8;
+  text-shadow: 0px 0px 12px rgba(255, 0, 0, 0.5);
+  margin-bottom: 25px;
+  text-align: justify;
+  line-height: 1.5;
+  height: 100px;
+}
+
+/* Styling for the button container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+/* Styling for buttons */
+.button-container__button {
+  background: linear-gradient(135deg, #c1a75a, #8d742d);
+  color: #1a0000;
+  font-weight: 700;
+  padding: 12px 30px;
+  border: 2px solid rgba(255, 214, 125, 0.6);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  /* box-shadow: 0 5px 15px rgba(193, 167, 90, 0.5); */
+}
+
+/* Hover effect for buttons */
+.button-container__button:hover {
+  background: linear-gradient(135deg, #d5bc77, #a3894e);
+  color: #000;
+  /* box-shadow: 0 7px 20px rgba(255, 214, 125, 0.8); */
+}
+
+/* glowing effect on button */
+.button-container__button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+  transform: rotate(25deg);
+  transition: all 0.4s ease-in-out;
+}
+
+.button-container__button:hover::before {
+  top: 100%;
+  left: 100%;
+}
