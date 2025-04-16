@@ -1,0 +1,27 @@
+body{
+background: linear-gradient(to top , red,blue);
+}
+
+
+#container{
+    max-width: 600px;
+    width: 100%;
+    margin: 2rem auto;
+display: grid;
+grid-template-columns: repeat(4,1fr);
+}
+
+.box{
+aspect-ratio: 1/1;
+border: 1px solid white;
+background: linear-gradient(to top , rgb(125, 236, 125),green);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 50px;
+}
+
+
+.hidden span{
+    display: none;
+}
