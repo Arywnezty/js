@@ -1,0 +1,156 @@
+/* body{
+background: linear-gradient(to top , rgb(128, 128, 128),rgba(128, 128, 128, 0.233));
+}
+
+
+#container{
+    max-width: 600px;
+    width: 100%;
+    margin: 2rem auto;
+display: grid;
+grid-template-columns: repeat(4,1fr);
+}
+
+.box{
+aspect-ratio: 1/1;
+border: 1px solid white;
+background: rgb(46, 46, 46);
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 50px;
+box-shadow: 19px 17px 24px -4px rgb(44, 44, 44);
+}
+
+
+.hidden span{
+    display: none;
+}
+
+.disable{
+    pointer-events: none;
+} */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #aeaeb4 100%);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #3a4a6d;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin-bottom: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-box {
+    text-align: center;
+}
+
+.info-label {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3a4a6d;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.box {
+    height: 100px;
+    background: #3a4a6d;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.box.hidden {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: transparent;
+}
+
+.box.disable {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.box.matched {
+    background: #4CAF50;
+    transform: scale(0.95);
+    pointer-events: none;
+}
+
+.win-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 100;
+    display: none;
+}
+
+.win-message h2 {
+    color: #4CAF50;
+    margin-top: 0;
+}
+
+.win-message button {
+    background: #3a4a6d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.win-message button:hover {
+    background: #2c3a57;
+}
