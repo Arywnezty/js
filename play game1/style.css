@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+h1 {
+    color: #3a4a6d;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    width: 80%;
+    margin-bottom: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.info-box {
+    text-align: center;
+}
+
+.info-label {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3a4a6d;
+}
+#container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+.box {
+    width: 100%;
+    height: 120px;
+    background-color: #3498db;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+.box.hidden img {
+    display: none;
+}
+.box:not(.hidden) img {
+    display: block;
+}
+.box.matched {
+    background-color: #2ecc71;
+    cursor: default;
+}
+.box.disable {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+#winMessage {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: #2980b9;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="style.js" defer></script>
+</head>
+<body>
+    <h1>Memory Game</h1>
+    <div class="game-info">
+        <div class="info-box">
+            <div class="info-label">Time</div>
+            <div class="info-value" id="timer">0</div>
+        </div>
+        <div class="info-box">
+            <div class="info-label">Moves</div>
+            <div class="info-value" id="moves">0</div>
+        </div>
+        <div class="info-box">
+            <div class="info-label">Matches</div>
+            <div class="info-value" id="matches">0</div>
+        </div>
+    </div>
+    <div id="container">
+        <div class="box"><img src="./img/1.svg" alt="" width="5%"></div>
+        <div class="box"><img src="./img/1.svg" alt="" width="5%"></div>
+        <div class="box"><img src="./img/2.svg" alt="" width="5%"></div>
+        <div class="box"><img src="./img/2.svg" alt="" width="5%"></div>
+        <div class="box"><img src="./img/3.svg" alt="" width="5%"></div>
+        <div class="box"><img src="./img/3.svg" alt="" width="5%"></div>
+        <div class="box"><img src="./img/4.svg" alt="" width="5%"></div>
+        <div class="box"><img src="./img/4.svg" alt="" width="5%"></div>
+        <div class="box"><img src="./img/5.svg" alt="" width="5%"></div>
+        <div class="box"><img src="./img/5.svg" alt="" width="5%"></div>
+        <div class="box"><img src="./img/6.svg" alt="" width="5%"></div>
+        <div class="box"><img src="./img/6.svg" alt="" width="5%"></div>
+        <div class="box"><img src="./img/7.svg" alt="" width="5%"></div>
+        <div class="box"><img src="./img/7.svg" alt="" width="5%"></div>
+        <div class="box"><img src="./img/8.svg" alt="" width="5%"></div>
+        <div class="box"><img src="./img/8.svg" alt="" width="5%"></div>
+    </div>
+    
+    <div id="winMessage">
+        <h2>Congratulations!</h2>
+        <p>You win the game!</p>
+        <div id="finalStats"></div>
+        <button onclick="resetGame()">Reset Game</button>
+    </div>
+</body>
+</html>
